@@ -64,7 +64,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoVH> {
         holder.btnCompletado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                toDo.setCompletado(!toDo.isCompletado());
+                notifyDataSetChanged();
             }
         });
     }
